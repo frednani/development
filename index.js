@@ -117,3 +117,4 @@ for(let i=arr.length-1;i>=0;i--){
 console.log(reverse(array));
 
 // uncomment all
+// progress on level 4
