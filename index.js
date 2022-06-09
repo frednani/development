@@ -50,20 +50,68 @@
 //     }
 // }
 // function 
-function mult(a,b){
-  console.log(5*5)
+// function mult(a,b){
+//   console.log(5*5)
+// }
+// mult()
+// function hello(name){
+//   console.log("hello",name);
+// }
+// hello("fred");
+// function sum(arr){
+// let output=[];
+//   for (let i=0;i<arr.length;i++){
+//     output.push(arr[i] *5) 
+//     }
+//   return output;
+// }
+// let result=sum([1,2,4,5,6,7])
+// console.log(result); 
+// // 
+  //reverse array
+// function reverse(array){
+//   let output =[];
+//   for (let i=array.length -1;i>=0;i--){
+//     output.push(array[i])
+//   }
+//   return output;
+// }
+// let result= reverse([1,2,3,4,5,6,7,8,9]);
+// console.log(result);
+// changing array value according
+// function binary(arr){
+//   let output=[];
+//   for(let i=0;i< arr.length;i++){
+//     if(arr[i] === 1){
+//       output.push("one");
+//     }
+//     if (arr[i] === 0){
+//       output.push("zero");
+//     }
+   
+//   }
+//    return output;
+// }
+// let result=binary([1,2,0,1,0,1]);
+// console.log(result);
+// exercise on array 
+let array=[1,2,1,2];
+function reverse(arr){
+  let output=[];
+for(let i=arr.length-1;i>=0;i--){
+  if(arr[i] === 4){
+    output.push("four");
+  }
+  if(arr[i]=== 3){
+    output.push("three");
+  }
+  if(arr[i]=== 2){
+    output.push("two");
+  }
+  if(arr[i]=== 1){
+    output.push("one");
+  }
 }
-mult()
-function hello(name){
-  console.log("hello",name);
-}
-hello("fred");
-function sum(arr){
-let output=[];
-  for (let i=0;i<arr.length;i++){
-    output.push(arr[i] *5) 
-    }
   return output;
 }
-let result=sum([1,2,4,5,6,7])
-console.log(result); 
+console.log(reverse(array));
