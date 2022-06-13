@@ -131,14 +131,26 @@
 // convertToF(40);
 //
 // reverse a string 
-function reverseString(str) {
-  let output="";
-  for(let i=str.length-1;i>=0;i--){
-  output+=str[i];
-  }
+// function reverseString(str) {
+//   let output="";
+//   for(let i=str.length-1;i>=0;i--){
+//   output+=str[i];
+//   }
 
-  return output;
+//   return output;
+// }
+
+//  let result =reverseString("amajyi");
+//  console.log(result);
+// factorize number
+function factorialize(num) {
+  if (num === 0) {
+    return 1;
+  }
+  return num * factorialize(num - 1);
 }
 
- let result =reverseString("amajyi");
- console.log(result);
+ let result = factorialize(0);
+console.log(result);
+
+
