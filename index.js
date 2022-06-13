@@ -143,14 +143,23 @@
 //  let result =reverseString("amajyi");
 //  console.log(result);
 // factorize number
-function factorialize(num) {
-  if (num === 0) {
-    return 1;
+// function factorialize(num) {
+//   if (num === 0) {
+//     return 1;
+//   }
+//   return num * factorialize(num - 1);
+// }
+
+//  let result = factorialize(0);
+// console.log(result);
+//truncate string challenge//
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+  if (str.length > num) {
+    return str.slice(0, num) + "...";
+  } else {
+    return str;
   }
-  return num * factorialize(num - 1);
 }
 
- let result = factorialize(0);
-console.log(result);
-
-
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
