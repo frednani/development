@@ -153,13 +153,23 @@
 //  let result = factorialize(0);
 // console.log(result);
 //truncate string challenge//
-function truncateString(str, num) {
-  // Clear out that junk in your trunk
-  if (str.length > num) {
-    return str.slice(0, num) + "...";
-  } else {
-    return str;
-  }
-}
+// function truncateString(str, num) {
+//   // Clear out that junk in your trunk
+//   if (str.length > num) {
+//     return str.slice(0, num) + "...";
+//   } else {
+//     return str;
+//   }
+// }
 
-truncateString("A-tisket a-tasket A green and yellow basket", 8);
+// truncateString("A-tisket a-tasket A green and yellow basket", 8);
+//  where do i belong challenge on microverse 
+function getIndexToIns(arr, num) {
+  // sort and find right index
+  let index = arr
+    .sort((curr, next) => curr - next)
+    .findIndex(currNum => num <= currNum);
+  // Returns index or total length of arr
+  return index === -1 ? arr.length : index;
+}
+getIndexToIns([40, 60], 50);
