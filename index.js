@@ -175,38 +175,73 @@
 // getIndexToIns([40, 60], 50);
 
 
-// freecode camp challenge ofJavaScript Algorithms and Data Structures - Record Collection 
-let recordCollection = {
-  2548: {
-    albumTitle: "Slippery When Wet",
-    artist: "Bon Jovi",
-    tracks: ["Let It Rock", "You Give Love a Bad Name"],
-  },
-  2468: {
-    albumTitle: "1999",
-    artist: "Prince",
-    tracks: ["1999", "Little Red Corvette"],
-  },
-  1245: {
-    artist: "Robert Palmer",
-    tracks: [],
-  },
-  5439: {
-    albumTitle: "ABBA Gold",
-  },
-};
+// // freecode camp challenge ofJavaScript Algorithms and Data Structures - Record Collection 
+// let recordCollection = {
+//   2548: {
+//     albumTitle: "Slippery When Wet",
+//     artist: "Bon Jovi",
+//     tracks: ["Let It Rock", "You Give Love a Bad Name"],
+//   },
+//   2468: {
+//     albumTitle: "1999",
+//     artist: "Prince",
+//     tracks: ["1999", "Little Red Corvette"],
+//   },
+//   1245: {
+//     artist: "Robert Palmer",
+//     tracks: [],
+//   },
+//   5439: {
+//     albumTitle: "ABBA Gold",
+//   },
+// };
 
-// Only change code below this line
-function updateRecords(records, id, prop, value) {
-  if (value === "") {
-    delete records[id][prop];
-  } else if (prop === "tracks") {
-    records[id][prop] ??= [];
-    records[id][prop].push(value);
-  } else {
-    records[id][prop] = value;
-  }
-  return records;
+// // Only change code below this line
+// function updateRecords(records, id, prop, value) {
+//   if (value === "") {
+//     delete records[id][prop];
+//   } else if (prop === "tracks") {
+//     records[id][prop] ??= [];
+//     records[id][prop].push(value);
+//   } else {
+//     records[id][prop] = value;
+//   }
+//   return records;
+// }
+
+// updateRecords(recordCollection, 5439, "artist", "ABBA");
+// while loop sequence 
+Iterate with JavaScript While Loops
+Setup
+const myArray = [];
+let i=5;
+while(i>=0){
+  myArray.push(i);
+  i--;
+}
+console.log(myArray);
+// Iterate with JavaScript For Loops
+const myArray = [];
+for (let i=1;i<=5;i++){
+myArray.push(i)
+}
+ console.log(myArray);
+//Iterate Odd Numbers With a For Loop
+const myArray = [];
+for (let i=1;i<=9;i +=2){
+  myArray.push(i);
+}
+console.log(myArray)
+//
+const myArray = [];
+for( let i=9;i>=1;i-= 2){
+  myArray.push(i);
+}
+//Iterate Through an Array with a For Loop
+const myArr = [2, 3, 4, 5, 6];
+let total = 0;
+for (let i = 0; i < myArr.length; i++) {
+  total += myArr[i];
 }
 
-updateRecords(recordCollection, 5439, "artist", "ABBA");
+
