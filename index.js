@@ -211,37 +211,51 @@
 
 // updateRecords(recordCollection, 5439, "artist", "ABBA");
 // while loop sequence 
-Iterate with JavaScript While Loops
-Setup
-const myArray = [];
-let i=5;
-while(i>=0){
-  myArray.push(i);
-  i--;
-}
-console.log(myArray);
-// Iterate with JavaScript For Loops
-const myArray = [];
-for (let i=1;i<=5;i++){
-myArray.push(i)
-}
- console.log(myArray);
-//Iterate Odd Numbers With a For Loop
-const myArray = [];
-for (let i=1;i<=9;i +=2){
-  myArray.push(i);
-}
-console.log(myArray)
-//
-const myArray = [];
-for( let i=9;i>=1;i-= 2){
-  myArray.push(i);
-}
-//Iterate Through an Array with a For Loop
-const myArr = [2, 3, 4, 5, 6];
-let total = 0;
-for (let i = 0; i < myArr.length; i++) {
-  total += myArr[i];
-}
+// Iterate with JavaScript While Loops
+// Setup
+// const myArray = [];
+// let i=5;
+// while(i>=0){
+//   myArray.push(i);
+//   i--;
+// }
+// console.log(myArray);
+// // Iterate with JavaScript For Loops
+// const myArray = [];
+// for (let i=1;i<=5;i++){
+// myArray.push(i)
+// }
+//  console.log(myArray);
+// //Iterate Odd Numbers With a For Loop
+// const myArray = [];
+// for (let i=1;i<=9;i +=2){
+//   myArray.push(i);
+// }
+// console.log(myArray)
+// //
+// const myArray = [];
+// for( let i=9;i>=1;i-= 2){
+//   myArray.push(i);
+// }
+// //Iterate Through an Array with a For Loop
+// const myArr = [2, 3, 4, 5, 6];
+// let total = 0;
+// for (let i = 0; i < myArr.length; i++) {
+//   total += myArr[i];
+// }
 
+
+// chonk monkey // solution
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  let newArr = [];
+  let i = 0;
+
+  while (i < arr.length) {
+    newArr.push(arr.slice(i, i + size));
+    i += size;
+  }
+  return newArr;
+}
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
 
