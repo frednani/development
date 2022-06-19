@@ -295,3 +295,23 @@ if (n<=0){
   return sum(arr,n-1)+arr[n-1];
 }
 }
+// generate a whole number within range 
+// Example
+function ourFunction(ourMin, ourMax) {
+
+  return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+
+ourFunction(1, 9);
+
+// Only change code below this line.
+
+function randomRange(myMin, myMax) {
+
+  return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+
+}
+
+// Change these values to test your function
+var myRandom = randomRange(5, 15);
+// 
