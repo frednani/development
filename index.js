@@ -95,26 +95,26 @@
 // let result=binary([1,2,0,1,0,1]);
 // console.log(result);
 // // exercise on array 
-// let array=[1,2,1,2];
-// function reverse(arr){
-//   let output=[];
-// for(let i=arr.length-1;i>=0;i--){
-//   if(arr[i] === 4){
-//     output.push("four");
-//   }
-//   if(arr[i]=== 3){
-//     output.push("three");
-//   }
-//   if(arr[i]=== 2){
-//     output.push("two");
-//   }
-//   if(arr[i]=== 1){
-//     output.push("one");
-//   }
-// }
-//   return output;
-// }
-// console.log(reverse(array));
+let array=[1,2,1,2];
+function reverse(arr){
+  let output=[];
+for(let i=arr.length-1;i>=0;i--){
+  if(arr[i] === 4){
+    output.push("four");
+  }
+  if(arr[i]=== 3){
+    output.push("three");
+  }
+  if(arr[i]=== 2){
+    output.push("two");
+  }
+  if(arr[i]=== 1){
+    output.push("one");
+  }
+}
+  return output;
+}
+console.log(reverse(array));
 
 // // // uncomment all
 // // // progress on level 4
@@ -246,72 +246,79 @@
 
 
 // chonk monkey // solution
-function chunkArrayInGroups(arr, size) {
-  // Break it up.
-  let newArr = [];
-  let i = 0;
+// function chunkArrayInGroups(arr, size) {
+//   // Break it up.
+//   let newArr = [];
+//   let i = 0;
 
-  while (i < arr.length) {
-    newArr.push(arr.slice(i, i + size));
-    i += size;
-  }
-  return newArr;
-}
-chunkArrayInGroups(["a", "b", "c", "d"], 2);
+//   while (i < arr.length) {
+//     newArr.push(arr.slice(i, i + size));
+//     i += size;
+//   }
+//   return newArr;
+// }
+// chunkArrayInGroups(["a", "b", "c", "d"], 2);
 
 
 // Sum All Numbers in a Range
-const sumAll = arr => {
-  // Buckle up everything to one!
-  const startNum = arr[0];
-  const endNum = arr[1];
+// const sumAll = arr => {
+//   // Buckle up everything to one!
+//   const startNum = arr[0];
+//   const endNum = arr[1];
 
-  // Get the count of numbers between the two numbers by subtracting them and add 1 to the absolute value.
-  // ex. There are |1-4| + 1 = 4, (1, 2, 3, 4), 4 numbers between 1 and 4.
-  const numCount = Math.abs(startNum - endNum) + 1;
+//   // Get the count of numbers between the two numbers by subtracting them and add 1 to the absolute value.
+//   // ex. There are |1-4| + 1 = 4, (1, 2, 3, 4), 4 numbers between 1 and 4.
+//   const numCount = Math.abs(startNum - endNum) + 1;
 
-  // Using Arithmetic Progression summing formula
-  const sum = ((startNum + endNum) * numCount) / 2;
-  return sum;
-};
-// Iterate with JavaScript Do...While Loops
-// Setup
-const myArray = [];
-let i = 10;
+//   // Using Arithmetic Progression summing formula
+//   const sum = ((startNum + endNum) * numCount) / 2;
+//   return sum;
+// };
+// // Iterate with JavaScript Do...While Loops
+// // Setup
+// const myArray = [];
+// let i = 10;
 
-// Only change code below this line
-do {
- myArray.push(i);
-  i++;
-} while(i<10){
+// // Only change code below this line
+// do {
+//  myArray.push(i);
+//   i++;
+// } while(i<10){
+// }
+
+// // Replace Loops using Recursion 
+// function sum(arr, n) {
+//   // Only change code below this line
+// if (n<=0){
+//   return 0;
+// } else {
+//   return sum(arr,n-1)+arr[n-1];
+// }
+// }
+// // generate a whole number within range 
+// // Example
+// function ourFunction(ourMin, ourMax) {
+
+//   return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+// }
+
+// ourFunction(1, 9);
+
+// // Only change code below this line.
+
+// function randomRange(myMin, myMax) {
+
+//   return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+
+// }
+
+// // Change these values to test your function
+// var myRandom = randomRange(5, 15);
+//  check two array then merge them to provide one array which is not in other array!
+function diffArray(arr1, arr2) {
+  return arr1
+    .concat(arr2)
+    .filter(item => !arr1.includes(item) || !arr2.includes(item));
 }
 
-// Replace Loops using Recursion 
-function sum(arr, n) {
-  // Only change code below this line
-if (n<=0){
-  return 0;
-} else {
-  return sum(arr,n-1)+arr[n-1];
-}
-}
-// generate a whole number within range 
-// Example
-function ourFunction(ourMin, ourMax) {
-
-  return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
-}
-
-ourFunction(1, 9);
-
-// Only change code below this line.
-
-function randomRange(myMin, myMax) {
-
-  return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
-
-}
-
-// Change these values to test your function
-var myRandom = randomRange(5, 15);
-// 
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
