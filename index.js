@@ -322,3 +322,9 @@ function diffArray(arr1, arr2) {
 }
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+// Use the Rest Parameter with Function Parameters
+//this is the answer!//
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+}
+console.log(sum(1,2,3));
