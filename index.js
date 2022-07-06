@@ -95,26 +95,26 @@
 // let result=binary([1,2,0,1,0,1]);
 // console.log(result);
 // // exercise on array 
-let array=[1,2,1,2];
-function reverse(arr){
-  let output=[];
-for(let i=arr.length-1;i>=0;i--){
-  if(arr[i] === 4){
-    output.push("four");
-  }
-  if(arr[i]=== 3){
-    output.push("three");
-  }
-  if(arr[i]=== 2){
-    output.push("two");
-  }
-  if(arr[i]=== 1){
-    output.push("one");
-  }
-}
-  return output;
-}
-console.log(reverse(array));
+// let array=[1,2,1,2];
+// function reverse(arr){
+//   let output=[];
+// for(let i=arr.length-1;i>=0;i--){
+//   if(arr[i] === 4){
+//     output.push("four");
+//   }
+//   if(arr[i]=== 3){
+//     output.push("three");
+//   }
+//   if(arr[i]=== 2){
+//     output.push("two");
+//   }
+//   if(arr[i]=== 1){
+//     output.push("one");
+//   }
+// }
+//   return output;
+// }
+// console.log(reverse(array));
 
 // // // uncomment all
 // // // progress on level 4
@@ -314,17 +314,38 @@ console.log(reverse(array));
 
 // // Change these values to test your function
 // var myRandom = randomRange(5, 15);
-//  check two array then merge them to provide one array which is not in other array!
-function diffArray(arr1, arr2) {
-  return arr1
-    .concat(arr2)
-    .filter(item => !arr1.includes(item) || !arr2.includes(item));
-}
+// //  check two array then merge them to provide one array which is not in other array!
+// function diffArray(arr1, arr2) {
+//   return arr1
+//     .concat(arr2)
+//     .filter(item => !arr1.includes(item) || !arr2.includes(item));
+// }
 
-diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
-// Use the Rest Parameter with Function Parameters
-//this is the answer!//
-const sum = (...args) => {
-  return args.reduce((a, b) => a + b, 0);
+// diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+// // Use the Rest Parameter with Function Parameters
+// //this is the answer!//
+// const sum = (...args) => {
+//   return args.reduce((a, b) => a + b, 0);
+// }
+// console.log(sum(1,2,3));
+// // 
+
+
+// seek and destroy coding challenge//
+function destroyer(arr) {
+  const valsToRemove = Object.values(arguments).slice(1);
+  const filteredArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    let removeElement = false;
+    for (let j = 0; j < valsToRemove.length; j++) {
+      if (arr[i] === valsToRemove[j]) {
+        removeElement = true;
+      }
+    }
+    if (!removeElement) {
+      filteredArray.push(arr[i]);
+    }
+  }
+  return filteredArray;
 }
-console.log(sum(1,2,3));
