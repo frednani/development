@@ -448,3 +448,18 @@ function sumPrimes(num) {
   }
   return sum;
 }
+
+// solving some challenge on hacker rank
+// challenge on birthday cake challenges
+// it was challenge about finding maximum and number of that maximum
+function birthdayCakeCandles(ar) {
+    let maxHeight = Math.max(...ar);
+    let maxHeightCount = 0;  
+    for(let i = 0; i < ar.length; i++){
+        if (ar[i] == maxHeight){
+            maxHeightCount = maxHeightCount + 1;
+        }
+    }
+    console.log(maxHeightCount);
+    return maxHeightCount;
+}
