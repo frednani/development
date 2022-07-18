@@ -468,7 +468,7 @@ function breakingRecords(scores) {
     let games = scores ;
     let min = games[0];
     let max = games[0];
-    
+      
     let minRecord = 0;
     let maxRecord = 0;
     
@@ -484,4 +484,16 @@ function breakingRecords(scores) {
     }
     
     return [maxRecord, minRecord];
+}
+// cat and mouse
+function catAndMouse(x, y, z) {
+    let catAPos = Math.abs(z - x);
+    let catBPos = Math.abs(z - y);
+    if (catAPos < catBPos) {
+        return "Cat A";
+    } else if (catBPos < catAPos) {
+        return "Cat B";
+    } else {
+        return "Mouse C";
+    }
 }
