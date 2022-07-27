@@ -503,3 +503,15 @@ function catAndMouse(x, y, z) {
     for (let i = 0; i < a.length; i++)
         a[i] > b[i] ? score[0]++ : a[i] < b[i] ? score[1]++ : ""
     return score
+
+
+
+   // this is the the level 6  //
+
+function simpleArraySum(ar) {
+  let sum = 0;
+  for (let i = 0; i < ar.length; i++) {
+    sum += ar[i];
+  }
+  return sum;
+}
