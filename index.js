@@ -3,7 +3,7 @@
 //   if(arr[i]>=3 && arr[i]<=7){
 //     console.log(arr[i])
 //   }
-  
+
 // }
 // //slide 7//
 // let word="nationality"
@@ -88,7 +88,7 @@
 //     if (arr[i] === 0){
 //       output.push("zero");
 //     }
-   
+
 //   }
 //    return output;
 // }
@@ -122,7 +122,7 @@
 // function convertToF(celsius) {
 //   let fahrenheit = (celsius * 9/5) + 32;
 //   // Only change code below this line
-  
+
 //   // Only change code above this line
 //   return fahrenheit;
 // }
@@ -453,60 +453,60 @@ function sumPrimes(num) {
 // challenge on birthday cake challenges
 // it was challenge about finding maximum and number of that maximum
 function birthdayCakeCandles(ar) {
-    let maxHeight = Math.max(...ar);
-    let maxHeightCount = 0;  
-    for(let i = 0; i < ar.length; i++){
-        if (ar[i] == maxHeight){
-            maxHeightCount = maxHeightCount + 1;
-        }
+  let maxHeight = Math.max(...ar);
+  let maxHeightCount = 0;
+  for (let i = 0; i < ar.length; i++) {
+    if (ar[i] == maxHeight) {
+      maxHeightCount = maxHeightCount + 1;
     }
-    console.log(maxHeightCount);
-    return maxHeightCount;
+  }
+  console.log(maxHeightCount);
+  return maxHeightCount;
 }
 // breaking record//
 function breakingRecords(scores) {
-    let games = scores ;
-    let min = games[0];
-    let max = games[0];
-      
-    let minRecord = 0;
-    let maxRecord = 0;
-    
-    for (const score of games) {
-        if (max < score) {
-            max = score;
-            maxRecord++;
-        }
-        else if (score < min) {
-            min = score;
-            minRecord++;
-        }
+  let games = scores;
+  let min = games[0];
+  let max = games[0];
+
+  let minRecord = 0;
+  let maxRecord = 0;
+
+  for (const score of games) {
+    if (max < score) {
+      max = score;
+      maxRecord++;
     }
-    
-    return [maxRecord, minRecord];
+    else if (score < min) {
+      min = score;
+      minRecord++;
+    }
+  }
+
+  return [maxRecord, minRecord];
 }
 // cat and mouse
 function catAndMouse(x, y, z) {
-    let catAPos = Math.abs(z - x);
-    let catBPos = Math.abs(z - y);
-    if (catAPos < catBPos) {
-        return "Cat A";
-    } else if (catBPos < catAPos) {
-        return "Cat B";
-    } else {
-        return "Mouse C";
-    }
+  let catAPos = Math.abs(z - x);
+  let catBPos = Math.abs(z - y);
+  if (catAPos < catBPos) {
+    return "Cat A";
+  } else if (catBPos < catAPos) {
+    return "Cat B";
+  } else {
+    return "Mouse C";
+  }
 }
- // hudle race!1
- let score = [0,0]
+// hudle race!1
+let score = [0, 0]
 
-    for (let i = 0; i < a.length; i++)
-        a[i] > b[i] ? score[0]++ : a[i] < b[i] ? score[1]++ : ""
-    return score
+for (let i = 0; i < a.length; i++)
+  a[i] > b[i] ? score[0]++ : a[i] < b[i] ? score[1]++ : ""
+return score
 
 
 
-   // this is the the level 6  //
+// this is the the level 6  //
 
 function simpleArraySum(ar) {
   let sum = 0;
@@ -515,3 +515,5 @@ function simpleArraySum(ar) {
   }
   return sum;
 }
+
+console.log("hello saidi");
